@@ -7,7 +7,7 @@ Form::Form(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
-	setFixedSize(size());
+    setFixedSize(size());
 }
 
 Form::~Form()
