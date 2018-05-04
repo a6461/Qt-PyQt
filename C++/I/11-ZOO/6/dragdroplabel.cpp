@@ -19,14 +19,12 @@ void DragDropLabel::mousePressEvent(QMouseEvent *event)
             setVisible(false);
         setStyleSheet("color: black;");
         QString s = "";
-        for (auto child : parent()->children())
+        for (auto child = parent()->children().begin();
+             child < parent()->children().begin() + 4; child++)
         {
-            if (child->objectName()[0] == 'l')
-            {
-                if (((DragDropLabel*)child)->isVisible())
-                    return;
-                s += ((DragDropLabel*)child)->text();
-            }
+            if (((DragDropLabel*)(*child))->isVisible())
+                return;
+            s += ((DragDropLabel*)(*child))->text();
         }
         if (s == "")
             return;
