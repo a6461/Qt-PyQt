@@ -7,3 +7,4 @@
 1. ZOO ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))
 ## Часть III
 1. CHKBOXES ([Python](/Python/III/24-CHKBOXES))
+2. LISTWDG1 ([Python](/Python/III/25-LISTWDG1))
