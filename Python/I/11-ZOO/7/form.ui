@@ -20,15 +20,12 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>39</y>
+     <y>42</y>
      <width>52</width>
      <height>13</height>
     </rect>
    </property>
    <property name="acceptDrops">
-    <bool>true</bool>
-   </property>
-   <property name="autoFillBackground">
     <bool>true</bool>
    </property>
    <property name="text">
@@ -38,16 +35,13 @@
   <widget class="DragDropLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>126</x>
-     <y>39</y>
+     <x>127</x>
+     <y>42</y>
      <width>32</width>
      <height>13</height>
     </rect>
    </property>
    <property name="acceptDrops">
-    <bool>true</bool>
-   </property>
-   <property name="autoFillBackground">
     <bool>true</bool>
    </property>
    <property name="text">
@@ -57,16 +51,13 @@
   <widget class="DragDropLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>232</x>
-     <y>39</y>
+     <x>233</x>
+     <y>42</y>
      <width>45</width>
      <height>13</height>
     </rect>
    </property>
    <property name="acceptDrops">
-    <bool>true</bool>
-   </property>
-   <property name="autoFillBackground">
     <bool>true</bool>
    </property>
    <property name="text">
@@ -76,16 +67,13 @@
   <widget class="DragDropLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>338</x>
-     <y>39</y>
+     <x>340</x>
+     <y>42</y>
      <width>32</width>
      <height>13</height>
     </rect>
    </property>
    <property name="acceptDrops">
-    <bool>true</bool>
-   </property>
-   <property name="autoFillBackground">
     <bool>true</bool>
    </property>
    <property name="text">
@@ -141,9 +129,6 @@
         </disabled>
        </palette>
       </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>
@@ -187,9 +172,6 @@
          </colorrole>
         </disabled>
        </palette>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
       </property>
       <property name="readOnly">
        <bool>true</bool>
@@ -235,9 +217,6 @@
         </disabled>
        </palette>
       </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>
@@ -281,9 +260,6 @@
          </colorrole>
         </disabled>
        </palette>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
       </property>
       <property name="readOnly">
        <bool>true</bool>

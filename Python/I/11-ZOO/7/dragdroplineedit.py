@@ -8,14 +8,10 @@ class DragDropLineEdit(QLineEdit):
 
     def dragEnterEvent(self, event):
         event.accept()
-        palette = self.palette()
-        palette.setColor(QPalette.Base, Qt.yellow)
-        self.setPalette(palette)
+        self.setStyleSheet('background-color: yellow;')
 
     def dragLeaveEvent(self, event):
-        palette = self.palette()
-        palette.setColor(QPalette.Base, QColor('#F0F0F0'))
-        self.setPalette(palette)
+        self.setStyleSheet('background-color: #F0F0F0;')
 
     def dropEvent(self, event):
         lb = event.source()
@@ -23,6 +19,4 @@ class DragDropLineEdit(QLineEdit):
             self.setText(lb.text())
             self.tag = lb.tag
         lb.setVisible(False)
-        palette = self.palette()
-        palette.setColor(QPalette.Base, QColor('#F0F0F0'))
-        self.setPalette(palette)
+        self.setStyleSheet('background-color: #F0F0F0;')

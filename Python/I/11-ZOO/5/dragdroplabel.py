@@ -7,9 +7,7 @@ class DragDropLabel(QLabel):
     
     def mousePressEvent(self, event):
         if event.buttons() == Qt.LeftButton:
-            palette = self.palette()
-            palette.setColor(QPalette.Foreground, Qt.blue)
-            self.setPalette(palette)
+            self.setStyleSheet('color: blue;')
             drag = QDrag(self)
             drag.setMimeData(QMimeData())
             drag.exec()
@@ -17,20 +15,17 @@ class DragDropLabel(QLabel):
             pos = self.parent().mapFromGlobal(QCursor.pos())
             if not rect.contains(pos):
                 self.setVisible(False)
-            palette.setColor(QPalette.Foreground, Qt.black)
-            self.setPalette(palette)
+            self.setStyleSheet('color: black;')
 
     def dragEnterEvent(self, event):
         event.accept()
-        palette = self.palette()
-        palette.setColor(QPalette.Background, Qt.yellow)
-        self.setPalette(palette)
+        self.setStyleSheet(
+            self.styleSheet() + 'background-color: yellow;')
         
     def dropEvent(self, event):
         lb = event.source()
-        palette = self.palette()
-        palette.setColor(QPalette.Background, QColor('#F0F0F0'))
-        self.setPalette(palette)
+        self.setStyleSheet(
+            self.styleSheet() + 'background-color: #F0F0F0;')
         if self == lb:
             return
         if lb.tag > self.tag:
@@ -40,6 +35,5 @@ class DragDropLabel(QLabel):
             lb.setVisible(False)
 
     def dragLeaveEvent(self, event):
-        palette = self.palette()
-        palette.setColor(QPalette.Background, QColor('#F0F0F0'))
-        self.setPalette(palette)
+        self.setStyleSheet(
+            self.styleSheet() + 'background-color: #F0F0F0;')
