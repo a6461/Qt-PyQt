@@ -7,9 +7,7 @@ DragDropLineEdit::DragDropLineEdit(QWidget *parent):
 void DragDropLineEdit::dragEnterEvent(QDragEnterEvent *event)
 {
     event->accept();
-    QPalette palette = this->palette();
-    palette.setColor(QPalette::Base, Qt::yellow);
-    setPalette(palette);
+    setStyleSheet("background-color: yellow;");
 }
 
 void DragDropLineEdit::dropEvent(QDropEvent *event)
@@ -21,14 +19,10 @@ void DragDropLineEdit::dropEvent(QDropEvent *event)
         setTag(lb->tag());
     }
     lb->setVisible(false);
-    QPalette palette = this->palette();
-    palette.setColor(QPalette::Base, QColor("#F0F0f0"));
-    setPalette(palette);
+    setStyleSheet(styleSheet().append("background-color: #f0f0f0;"));
 }
 
 void DragDropLineEdit::dragLeaveEvent(QDragLeaveEvent*)
 {
-    QPalette palette = this->palette();
-    palette.setColor(QPalette::Base, QColor("#F0F0f0"));
-    setPalette(palette);
+    setStyleSheet("background-color: #f0f0f0;");
 }
