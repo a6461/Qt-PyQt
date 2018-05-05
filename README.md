@@ -4,7 +4,7 @@
 
 На данный момент реализованы следующие проекты:
 ## Часть I
-1. **COLORS** ([C++](/C++/I/09-COLORS))<br/>
+1. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
 *Цвета*
 2. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
 *Перетаскивание (drag & drop)*
