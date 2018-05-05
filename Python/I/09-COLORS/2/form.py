@@ -13,11 +13,15 @@ class Form(Ui_Form, QWidget):
         self.horizontalSlider_2.valueChanged.connect(self.setColor)
         self.horizontalSlider_3.valueChanged.connect(self.setColor)
         self.horizontalSlider_4.valueChanged.connect(self.setColor)
-
+        self.setColor()
+        
     def setColor(self):
+        c = QColor(self.horizontalSlider_2.value(),
+                self.horizontalSlider_3.value(),
+                self.horizontalSlider_4.value(),
+                self.horizontalSlider.value())
         self.label_6.setStyleSheet(
-            'background-color: rgba({},{},{},{}); color: white'
-                .format(self.horizontalSlider_2.value(),
-                    self.horizontalSlider_3.value(),
-                    self.horizontalSlider_4.value(),
-                    self.horizontalSlider.value() / 255.0))
+            'background-color: rgba({},{},{},{}); color: rgb({},{},{})'
+                .format(c.red(), c.green(), c.blue(), c.alpha() / 255.0,
+                        255 ^ c.red(), 255 ^ c.green(), 255 ^ c.blue()))
+        self.label_6.setText('{:02X}{}'.format(c.alpha(), c.name().upper()[1:]))
