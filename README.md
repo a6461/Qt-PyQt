@@ -20,5 +20,5 @@
 *Флажки и группы флажков*
 2. **LISTWDG1** ([Python](/Python/III/25-LISTWDG1))<br/>
 *Выпадающие и обычные списки*
-3. **HTOWERS** ([Python](/Python/III/33-HTOWERS), [описание](/Python/III/33-HTOWERS33-HTOWERS.docx))<br/>
+3. **HTOWERS** ([Python](/Python/III/33-HTOWERS), [описание](/Python/III/33-HTOWERS/33-HTOWERS.docx))<br/>
 *Создание компонентов во время выполнения программы*
