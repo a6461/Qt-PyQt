@@ -4,10 +4,8 @@
 
 На данный момент реализованы следующие проекты:
 ## Часть I
-<dl>
-  <dt>1. ZOO ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))</dt>
-  <dd><em>Перетаскивание (drag & drop)</em></dd>
-</dl>
+1. ZOO ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
+Перетаскивание (drag & drop)
 ## Часть II
 1. PNGEDIT1 ([Python](/Python/II/14-PNGEDIT1))
 2. PNGEDIT2 ([Python](/Python/II/15-PNGEDIT2))
