@@ -4,9 +4,11 @@
 
 На данный момент реализованы следующие проекты:
 ## Часть I
-1. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
+1. **SIGSLOTS** ([C++](/C++/I/04-EVENTS))<br/>
+*Сигналы, слоты и события*
+2. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
 *Цвета*
-2. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
+3. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
 *Перетаскивание (drag & drop)*
 ## Часть II
 1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1))<br/>
