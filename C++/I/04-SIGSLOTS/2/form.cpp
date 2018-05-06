@@ -28,8 +28,7 @@ void Form::wildButtonMove()
 {
     if (QApplication::keyboardModifiers() == Qt::ControlModifier)
         return;
-    ui->pushButton_2->move(qrand() % (rect().width() - 5),
-                           qrand() % (rect().height() - 5));
+    ui->pushButton_2->move(qrand() % (width() - 5), qrand() % (height() - 5));
 }
 
 void Form::on_pushButton_2_clicked()
