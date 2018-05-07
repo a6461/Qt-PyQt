@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form3</class>
+ <widget class="QDialog" name="Form3">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>417</width>
+    <height>125</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Диалоговое окно</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

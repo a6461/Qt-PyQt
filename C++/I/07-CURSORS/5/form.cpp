@@ -30,6 +30,7 @@ Form::Form(QWidget *parent) :
     trayIcon->setIcon(ico->at(0));
     trayIcon->setToolTip("Icon in Traybar");
     trayIcon->setVisible(false);
+    setWindowFlags(Qt::Tool | Qt::WindowCloseButtonHint | Qt::WindowSystemMenuHint | Qt::CustomizeWindowHint | Qt::WindowStaysOnTopHint);
 }
 
 Form::~Form()
@@ -76,13 +77,13 @@ void Form::on_pushButton_6_clicked()
     trayIcon->setVisible(b);
     if (b)
     {
-        setWindowFlags(Qt::Dialog);
+        setWindowFlags(Qt::Tool);
     }
     else
     {
         setWindowFlags(Qt::Window);
     }
-    //show();
+    show();
     ui->pushButton_6->setText(b ? "Hide Tray Icon" : "Show Tray Icon");
 }
 
