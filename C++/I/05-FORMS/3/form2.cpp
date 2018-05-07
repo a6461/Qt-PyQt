@@ -6,6 +6,7 @@ Form2::Form2(QWidget *parent) :
     ui(new Ui::Form2)
 {
     ui->setupUi(this);
+    connect(this, SIGNAL(visibleChanged()), this, SLOT(changeVisible()));
 }
 
 Form2::~Form2()
@@ -23,4 +24,6 @@ void Form2::changeVisible()
 {
     setVisible(!isVisible());
     emit textChanged();
+    if (isVisible())
+        ui->label->setText(QString("Окно открыто в %1-й раз.").arg(++count));
 }

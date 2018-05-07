@@ -28,6 +28,7 @@ private slots:
 
 private:
     Ui::Form2 *ui;
+    int count = 0;
 };
 
 #endif // FORM2_H
