@@ -20,7 +20,7 @@ public:
 private slots:
     void on_pushButton_clicked();
     void on_pushButton_2_clicked();
-    void changeButtonText();
+    void setPushButtonText(bool visible);
 
 private:
     Ui::Form *ui;

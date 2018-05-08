@@ -1,6 +1,5 @@
 #include "form.h"
 #include "ui_form.h"
-#include <iostream>
 
 Form::Form(QWidget *parent) :
     QWidget(parent),
@@ -10,7 +9,7 @@ Form::Form(QWidget *parent) :
     setFixedSize(size());
     form2->setWindowFlags(Qt::Dialog | Qt::WindowMinMaxButtonsHint | Qt::WindowCloseButtonHint);
     form3->setWindowFlags(Qt::Dialog | Qt::WindowCloseButtonHint);
-    connect(form2, SIGNAL(textChanged()), this, SLOT(changeButtonText()));
+    connect(form2, SIGNAL(visibleChanged(bool)), this, SLOT(setPushButtonText(bool)));
 }
 
 Form::~Form()
@@ -21,9 +20,10 @@ Form::~Form()
 void Form::on_pushButton_clicked()
 {
     form2->move(geometry().right() - 10, geometry().bottom() - 10);
-    form2->setVisible(!form2->isVisible());
-    ui->pushButton->setText(form2->isVisible() ? "Закрыть подчиненное окно" :
-        "Открыть подчиненное окно");
+    if (form2->isVisible())
+        form2->close();
+    else
+        form2->show();
 }
 
 void Form::on_pushButton_2_clicked()
@@ -31,8 +31,8 @@ void Form::on_pushButton_2_clicked()
     form3->show();
 }
 
-void Form::changeButtonText()
+void Form::setPushButtonText(bool visible)
 {
-    ui->pushButton->setText(form2->isVisible() ? "Закрыть подчиненное окно" :
-        "Открыть подчиненное окно");
+    ui->pushButton->setText(visible ? "Открыть подчиненное окно" :
+        "Закрыть подчиненное окно");
 }

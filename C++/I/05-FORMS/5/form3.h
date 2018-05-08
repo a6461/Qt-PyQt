@@ -16,6 +16,9 @@ public:
     explicit Form3(QWidget *parent = 0);
     ~Form3();
 
+protected:
+    void showEvent(QShowEvent *);
+
 signals:
     void windowTitlesChanged(const QString &title1, const QString &title2);
 

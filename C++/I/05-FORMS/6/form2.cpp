@@ -1,5 +1,6 @@
 #include "form2.h"
 #include "ui_form2.h"
+#include <QMessageBox>
 
 Form2::Form2(QWidget *parent) :
     QDialog(parent),
@@ -19,8 +20,11 @@ void Form2::showEvent(QShowEvent *)
     emit visibleChanged(false);
 }
 
-void Form2::closeEvent(QCloseEvent*)
+void Form2::closeEvent(QCloseEvent *event)
 {
-    emit visibleChanged(true);
+    if (QMessageBox::question(this, "Подтверждение", "Закрыть подчиненное окно?")
+            == QMessageBox::No)
+        event->ignore();
+    else
+        emit visibleChanged(true);
 }
-

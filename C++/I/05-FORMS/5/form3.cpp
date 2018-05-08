@@ -19,3 +19,8 @@ void Form3::on_buttonBox_clicked(QAbstractButton *button)
     if ((QPushButton*)button == ui->buttonBox->button(QDialogButtonBox::Apply))
         emit windowTitlesChanged(ui->lineEdit->text(), ui->lineEdit_2->text());
 }
+
+void Form3::showEvent(QShowEvent *)
+{
+    ui->lineEdit->setFocus();
+}

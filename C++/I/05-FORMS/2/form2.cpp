@@ -13,14 +13,13 @@ Form2::~Form2()
     delete ui;
 }
 
-void Form2::closeEvent(QCloseEvent *)
+void Form2::showEvent(QShowEvent*)
 {
-    setVisible(false);
-    emit textChanged();
+    emit visibleChanged(false);
 }
 
-void Form2::changeVisible()
+void Form2::closeEvent(QCloseEvent*)
 {
-    setVisible(!isVisible());
-    emit textChanged();
+    emit visibleChanged(true);
 }
+

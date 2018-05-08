@@ -1,7 +1,6 @@
 #ifndef FORM2_H
 #define FORM2_H
 
-#include <QCloseEvent>
 #include <QDialog>
 
 namespace Ui {
@@ -17,14 +16,11 @@ public:
     ~Form2();
 
 protected:
-    void closeEvent(QCloseEvent *);
+    void showEvent(QShowEvent*);
+    void closeEvent(QCloseEvent*);
 
 signals:
-    void visibleChanged();
-    void textChanged();
-
-private slots:
-    void changeVisible();
+    void visibleChanged(bool visible);
 
 private:
     Ui::Form2 *ui;
