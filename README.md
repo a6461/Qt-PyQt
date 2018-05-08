@@ -6,7 +6,7 @@
 ## Часть I
 1. **SIGSLOTS** ([C++](/C++/I/04-EVENTS))<br/>
 *Сигналы, слоты и события*
-2. **SIGSLOTS** ([C++](/C++/I/05-FORMS))<br/>
+2. **FORMS** ([C++](/C++/I/05-FORMS))<br/>
 *Формы*
 3. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
 *Цвета*
