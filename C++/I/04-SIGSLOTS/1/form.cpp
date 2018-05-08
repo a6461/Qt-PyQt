@@ -15,6 +15,6 @@ Form::~Form()
 
 void Form::mousePressEvent(QMouseEvent *event)
 {
-    ui->pushButton->move(event->pos().x() - ui->pushButton->width() / 2,
-        event->pos().y() - ui->pushButton->height() / 2);
+    ui->button->move(event->x() - ui->button->width() / 2,
+                     event->y() - ui->button->height() / 2);
 }
