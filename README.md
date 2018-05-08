@@ -6,9 +6,11 @@
 ## Часть I
 1. **SIGSLOTS** ([C++](/C++/I/04-EVENTS))<br/>
 *Сигналы, слоты и события*
-2. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
+2. **SIGSLOTS** ([C++](/C++/I/05-FORMS))<br/>
+*Формы*
+3. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
 *Цвета*
-3. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
+4. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
 *Перетаскивание (drag & drop)*
 ## Часть II
 1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1))<br/>
