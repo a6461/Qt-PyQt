@@ -1,7 +1,6 @@
 #ifndef FORM_H
 #define FORM_H
 
-#include <QMouseEvent>
 #include <QWidget>
 
 namespace Ui {
@@ -15,14 +14,6 @@ class Form : public QWidget
 public:
     explicit Form(QWidget *parent = 0);
     ~Form();
-
-protected:
-    void mousePressEvent(QMouseEvent *event);
-
-private slots:
-    void wildButtonMove();
-
-    void on_button_2_clicked();
 
 private:
     Ui::Form *ui;

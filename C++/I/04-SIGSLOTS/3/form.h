@@ -23,7 +23,7 @@ protected:
 
 private slots:
     void wildButtonMove();
-    void on_pushButton_2_clicked();
+    void on_button_2_clicked();
     void changeWindowState();
 
 private:

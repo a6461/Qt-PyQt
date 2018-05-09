@@ -48,7 +48,7 @@
   <customwidget>
    <class>WildButton</class>
    <extends>QPushButton</extends>
-   <header>wildbutton.h</header>
+   <header>wildbutton</header>
   </customwidget>
  </customwidgets>
  <resources/>
