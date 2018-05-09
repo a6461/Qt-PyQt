@@ -23,4 +23,4 @@ private:
     QList<QCursor> *cur = new QList<QCursor>();
 };
 
-#endif // FORM1_H
+#endif // FORM_H

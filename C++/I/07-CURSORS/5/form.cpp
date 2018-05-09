@@ -76,8 +76,3 @@ void Form::on_pushButton_6_clicked()
     trayIcon->setVisible(b);
     ui->pushButton_6->setText(b ? "Hide Tray Icon" : "Show Tray Icon");
 }
-
-void Form::closeEvent(QCloseEvent *)
-{
-    QApplication::quit();
-}

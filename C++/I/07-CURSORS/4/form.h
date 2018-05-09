@@ -33,4 +33,4 @@ private:
     QList<QIcon>* ico = new QList<QIcon>();
 };
 
-#endif // FORM1_H
+#endif // FORM_H
