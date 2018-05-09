@@ -4,15 +4,17 @@
 
 На данный момент реализованы следующие проекты:
 ## Часть I
-1. **SIGSLOTS** ([C++](/C++/I/04-EVENTS) и [Python](/Python/I/04-SIGSLOTS))<br/>
+1. **CHKBOXES** ([Python](/Python/I/03-EXCEP))<br/>
+*Обработка исключений*
+2. **SIGSLOTS** ([C++](/C++/I/04-EVENTS) и [Python](/Python/I/04-SIGSLOTS))<br/>
 *Сигналы, слоты и события*
-2. **FORMS** ([C++](/C++/I/05-FORMS))<br/>
+3. **FORMS** ([C++](/C++/I/05-FORMS))<br/>
 *Формы*
-3. **CURSORS** ([C++](/C++/I/07-CURSORS))<br/>
+4. **CURSORS** ([C++](/C++/I/07-CURSORS))<br/>
 *Цвета*
-4. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
+5. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
 *Цвета*
-5. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
+6. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
 *Перетаскивание (drag & drop)*
 ## Часть II
 1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1))<br/>
