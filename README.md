@@ -4,7 +4,7 @@
 
 На данный момент реализованы следующие проекты:
 ## Часть I
-1. **EXCEP** ([Python](/Python/I/03-EXCEP))<br/>
+1. **EXCEP** ([Python](/Python/I/03-EXCEP), [описание](/Python/I/03-EXCEP/03-EXCEP.docx))<br/>
 *Обработка исключений*
 2. **SIGSLOTS** ([C++](/C++/I/04-EVENTS) и [Python](/Python/I/04-SIGSLOTS))<br/>
 *Сигналы, слоты и события*
