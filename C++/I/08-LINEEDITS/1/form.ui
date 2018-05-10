@@ -19,12 +19,47 @@
      <x>10</x>
      <y>10</y>
      <width>311</width>
-     <height>111</height>
+     <height>101</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="ColorLineEdit" name="lineEdit">
+      <property name="text">
+       <string>Data</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="ColorLineEdit" name="lineEdit_2">
+      <property name="text">
+       <string>Data</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="ColorLineEdit" name="lineEdit_3">
+      <property name="text">
+       <string>Data</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="ColorLineEdit" name="lineEdit_4">
+      <property name="text">
+       <string>Data</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="1">
      <widget class="ColorLineEdit" name="lineEdit_5">
+      <property name="text">
+       <string>Data</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="ColorLineEdit" name="lineEdit_6">
       <property name="text">
        <string>Data</string>
       </property>
@@ -44,43 +79,8 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="2">
-     <widget class="ColorLineEdit" name="lineEdit_6">
-      <property name="text">
-       <string>Data</string>
-      </property>
-     </widget>
-    </item>
     <item row="2" column="2">
      <widget class="ColorLineEdit" name="lineEdit_9">
-      <property name="text">
-       <string>Data</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="ColorLineEdit" name="lineEdit_3">
-      <property name="text">
-       <string>Data</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="ColorLineEdit" name="lineEdit_2">
-      <property name="text">
-       <string>Data</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="ColorLineEdit" name="lineEdit_4">
-      <property name="text">
-       <string>Data</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="ColorLineEdit" name="lineEdit">
       <property name="text">
        <string>Data</string>
       </property>
