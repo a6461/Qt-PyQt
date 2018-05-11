@@ -28,8 +28,7 @@ class Form(Ui_Form, QWidget):
         self.pushButton_4.clicked.connect(self.clear)
         self.form2.new()
         self.label.mouseMoved.connect(self.mouseMove)
-        self.label.startChanged.connect(self.changeStart)
-        self.label_3.backColorChanged.connect(self.changePenColor)
+        self.label.mousePressed.connect(self.mousePress)
         self.pen.setCapStyle(Qt.RoundCap)
 
     def new(self):
@@ -69,10 +68,10 @@ class Form(Ui_Form, QWidget):
             self.startPt = event.pos()
             self.label.repaint()
 
-    def changeStart(self, pos):
-        self.startPt = pos
+    def mousePress(self, event):
+        self.startPt = event.pos()
 
-    def changePenColor(self):
+    def on_label_3_backColorChanged(self):
         self.pen.setColor(self.label_3.palette().color(QPalette.Background))
 
     def on_spinBox_valueChanged(self, value):

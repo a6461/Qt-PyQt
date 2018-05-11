@@ -4,14 +4,14 @@ from PyQt5.QtWidgets import *
 
 class ImageLabel(QLabel):
     mouseMoved = pyqtSignal(QMouseEvent)
+    mousePressed = pyqtSignal(QMouseEvent)
     mouseReleased = pyqtSignal(QMouseEvent)
-    startChanged = pyqtSignal(QPoint)
     
     def mouseMoveEvent(self, event):
         self.mouseMoved.emit(event)
 
     def mousePressEvent(self, event):
-        self.startChanged.emit(event.pos())
+        self.mousePressed.emit(event)
 		
     def mouseReleaseEvent(self, event):
         self.mouseReleased.emit(event)

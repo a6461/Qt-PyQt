@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'form.ui'
 #
-# Created by: PyQt5 UI code generator 5.10
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -47,7 +47,7 @@ class Ui_Form(object):
         self.label_2.setObjectName("label_2")
         self.label_3 = ColorLabel(Form)
         self.label_3.setGeometry(QtCore.QRect(110, 255, 40, 40))
-        self.label_3.setStyleSheet("background-color:rgb(0, 0, 0)")
+        self.label_3.setStyleSheet("background-color:black;")
         self.label_3.setFrameShape(QtWidgets.QFrame.Box)
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")

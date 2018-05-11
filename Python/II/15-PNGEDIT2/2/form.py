@@ -31,12 +31,11 @@ class Form(Ui_Form, QWidget):
         self.pushButton_4.clicked.connect(self.clear)
         self.form2.new()
         self.label.mouseMoved.connect(self.mouseMove)
-        self.label.startChanged.connect(self.changeStart)
+        self.label.mousePressed.connect(self.mousePress)
         self.label.mouseReleased.connect(self.mouseRelease)
-        self.label_3.backColorChanged.connect(self.changePenColor)
         self.pen.setCapStyle(Qt.RoundCap)
-        self.radioButton.toggled.connect(self.changeMode)
-        self.radioButton_2.toggled.connect(self.changeMode)
+        self.radioButton.toggled.connect(self.setMode)
+        self.radioButton_2.toggled.connect(self.setMode)
         self.pix = QPixmap(self.label.pixmap())
 
     def new(self):
@@ -45,6 +44,7 @@ class Form(Ui_Form, QWidget):
             self.setWindowTitle('Image Editor')
 
     def open(self):
+        self.startPt = self.nullPt
         s = QFileDialog.getOpenFileName(self, 'Открытие', '',
             'Image files (*.bmp *.jpg *.png *.gif)')[0]
         if s:
@@ -56,6 +56,7 @@ class Form(Ui_Form, QWidget):
             self.setWindowTitle('Image Editor - ' + s)
 
     def save(self):
+        self.startPt = self.nullPt
         s = QFileDialog.getSaveFileName(self, 'Открытие', '',
             'PNG-files (*.png)')[0]
         if s:
@@ -94,17 +95,17 @@ class Form(Ui_Form, QWidget):
             self.startPt = event.pos()
             self.label.repaint()
 
-    def changeStart(self, pos):
+    def mousePress(self, event):
         self.pix = QPixmap(self.label.pixmap())
-        self.movePt = self.startPt = pos
+        self.movePt = self.startPt = event.pos()
 
-    def changePenColor(self):
+    def on_label_3_backColorChanged(self):
         self.pen.setColor(self.label_3.palette().color(QPalette.Background))
 
     def on_spinBox_valueChanged(self, value):
         self.pen.setWidth(int(value))
 
-    def changeMode(self):
+    def setMode(self):
         rb = self.sender()
         if not rb.isChecked():
             return
