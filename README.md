@@ -17,7 +17,7 @@
 6. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
 *Перетаскивание (drag & drop)*
 ## Часть II
-1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1))<br/>
+1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1), [описание](/Python/II/14-PNGEDIT1/14-PNGEDIT1.docx))<br/>
 *Работа с графическими файлами, рисование тонким пером*
 2. **PNGEDIT2** ([Python](/Python/II/15-PNGEDIT2))<br/>
 *Цветное перо и прямые линии*
