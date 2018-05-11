@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from form2 import *
 import os
 
-class Form(Ui_Form, QWidget):    
+class Form(Ui_Form, QWidget):
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
@@ -37,13 +37,9 @@ class Form(Ui_Form, QWidget):
 
     def open(self):
         s = QFileDialog.getOpenFileName(self, 'Открытие', '',
-            'Image files (*.bmp *.jpg *.png *.gif)')[0]
+            'Image files (*.bmp *.jpg *.png)')[0]
         if s:
-            if os.path.splitext(s)[1] == '.gif':
-                self.label.setMovie(QMovie(s))
-                self.label.movie().start()
-            else:
-                self.label.setPixmap(QPixmap(s, '1'))
+            self.label.setPixmap(QPixmap(s, '1'))
             self.setWindowTitle('Image Editor - ' + s)
 
     def save(self):

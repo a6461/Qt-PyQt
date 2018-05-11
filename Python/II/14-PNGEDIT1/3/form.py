@@ -7,6 +7,7 @@ from imagelabel import *
 import os
 
 class Form(Ui_Form, QWidget):
+    pen = QPen(Qt.black)
     startPt = QPoint()
     
     def __init__(self):
@@ -25,7 +26,7 @@ class Form(Ui_Form, QWidget):
         self.pushButton_3.clicked.connect(self.save)
         self.form2.new()
         self.label.mouseMoved.connect(self.mouseMove)
-        self.label.startChanged.connect(self.changeStart)
+        self.label.mousePressed.connect(self.mousePress)
 
     def new(self):
         self.form2.spinBox.setFocus(True)
@@ -36,11 +37,7 @@ class Form(Ui_Form, QWidget):
         s = QFileDialog.getOpenFileName(self, 'Открытие', '',
             'Image files (*.bmp *.jpg *.png *.gif)')[0]
         if s:
-            if os.path.splitext(s)[1] == '.gif':
-                self.label.setMovie(QMovie(s))
-                self.label.movie().start()
-            else:
-                self.label.setPixmap(QPixmap(s, '1'))
+            self.label.setPixmap(QPixmap(s, '1'))
             self.setWindowTitle('Image Editor - ' + s)
 
     def save(self):
@@ -51,12 +48,13 @@ class Form(Ui_Form, QWidget):
             self.setWindowTitle('Image Editor - ' + s)
 
     def mouseMove(self, event):
-        self.coord.setText('X,Y: {},{}'.format(event.x(), event.y()))
+        self.label_2.setText('X,Y: {},{}'.format(event.x(), event.y()))
         if event.buttons() == Qt.LeftButton:
             painter = QPainter(self.label.pixmap())
+            painter.setPen(self.pen)
             painter.drawLine(self.startPt, event.pos())
             self.startPt = event.pos()
             self.label.repaint()
 
-    def changeStart(self, pos):
-        self.startPt = pos
+    def mousePress(self, event):
+        self.startPt = event.pos()

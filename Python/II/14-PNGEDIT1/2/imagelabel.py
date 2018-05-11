@@ -3,7 +3,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
 class ImageLabel(QLabel):
-    mouseMoved = pyqtSignal(QPoint)
+    mouseMoved = pyqtSignal(QMouseEvent)
     
     def mouseMoveEvent(self, event):
-        self.mouseMoved.emit(event.pos())
+        self.mouseMoved.emit(event)

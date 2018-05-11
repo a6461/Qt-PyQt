@@ -22,7 +22,7 @@ class Form(Ui_Form, QWidget):
         self.pushButton_2.clicked.connect(self.open)
         self.pushButton_3.clicked.connect(self.save)
         self.form2.new()
-        self.label.mouseMoved.connect(self.changeCoords)
+        self.label.mouseMoved.connect(self.mouseMove)
 
     def new(self):
         self.form2.spinBox.setFocus(True)
@@ -33,11 +33,7 @@ class Form(Ui_Form, QWidget):
         s = QFileDialog.getOpenFileName(self, 'Открытие', '',
             'Image files (*.bmp *.jpg *.png *.gif)')[0]
         if s:
-            if os.path.splitext(s)[1] == '.gif':
-                self.label.setMovie(QMovie(s))
-                self.label.movie().start()
-            else:
-                self.label.setPixmap(QPixmap(s, '1'))
+            self.label.setPixmap(QPixmap(s, '1'))
             self.setWindowTitle('Image Editor - ' + s)
 
     def save(self):
@@ -47,5 +43,5 @@ class Form(Ui_Form, QWidget):
             self.label.pixmap().save(s)
             self.setWindowTitle('Image Editor - ' + s)
 
-    def changeCoords(self, pos):
-        self.coord.setText('X,Y: {},{}'.format(pos.x(), pos.y()))
+    def mouseMove(self, event):
+        self.label_2.setText('X,Y: {},{}'.format(event.x(), event.y()))

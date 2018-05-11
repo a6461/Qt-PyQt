@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'form.ui'
 #
-# Created by: PyQt5 UI code generator 5.10
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -36,11 +36,11 @@ class Ui_Form(object):
         self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 432, 228))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-        self.coord = QtWidgets.QLabel(Form)
-        self.coord.setGeometry(QtCore.QRect(445, 257, 100, 23))
-        self.coord.setFrameShape(QtWidgets.QFrame.Box)
-        self.coord.setAlignment(QtCore.Qt.AlignCenter)
-        self.coord.setObjectName("coord")
+        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2.setGeometry(QtCore.QRect(445, 257, 100, 23))
+        self.label_2.setFrameShape(QtWidgets.QFrame.Box)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -51,5 +51,5 @@ class Ui_Form(object):
         self.pushButton.setText(_translate("Form", "&New"))
         self.pushButton_2.setText(_translate("Form", "&Open"))
         self.pushButton_3.setText(_translate("Form", "&Save"))
-        self.coord.setText(_translate("Form", "X,Y: 0,0"))
+        self.label_2.setText(_translate("Form", "X,Y: 0,0"))
 
