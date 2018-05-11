@@ -19,7 +19,7 @@
 ## Часть II
 1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1), [описание](/Python/II/14-PNGEDIT1/14-PNGEDIT1.docx))<br/>
 *Работа с графическими файлами, рисование тонким пером*
-2. **PNGEDIT2** ([Python](/Python/II/15-PNGEDIT2))<br/>
+2. **PNGEDIT2** ([Python](/Python/II/15-PNGEDIT2), [описание](/Python/II/15-PNGEDIT2/15-PNGEDIT2.docx))<br/>
 *Цветное перо и прямые линии*
 3. **PNGEDIT3** ([Python](/Python/II/16-PNGEDIT3))<br/>
 *Прямоугольники и эллипсы, режим прозрачности*
