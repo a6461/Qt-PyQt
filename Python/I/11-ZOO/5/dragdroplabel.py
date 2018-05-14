@@ -23,17 +23,15 @@ class DragDropLabel(QLabel):
             self.styleSheet() + 'background-color: yellow;')
         
     def dropEvent(self, event):
-        lb = event.source()
-        self.setStyleSheet(
-            self.styleSheet() + 'background-color: #F0F0F0;')
-        if self == lb:
+        src = event.source()
+        if self == src:
             return
-        if lb.tag > self.tag:
-            lb.move(self.pos())
+        if src.tag > self.tag:
+            src.move(self.pos())
             self.setVisible(False)
         else:
-            lb.setVisible(False)
+            src.setVisible(False)
 
     def dragLeaveEvent(self, event):
         self.setStyleSheet(
-            self.styleSheet() + 'background-color: #F0F0F0;')
+            self.styleSheet() + 'background-color: #f0f0f0;')
