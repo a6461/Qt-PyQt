@@ -9,8 +9,8 @@ class DragDropLineEdit(QLineEdit):
         event.accept()
 
     def dropEvent(self, event):
-        lb = event.source()
-        if lb.tag >= self.tag:
-            self.setText(lb.text())
-            self.tag = lb.tag
-        lb.setVisible(False)
+        src = event.source()
+        if src.tag >= self.tag:
+            self.setText(src.text())
+            self.tag = src.tag
+        src.setVisible(False)

@@ -9,7 +9,7 @@ class DragDropLabel(QLabel):
         if event.buttons() == Qt.LeftButton:
             drag = QDrag(self)
             drag.setMimeData(QMimeData())
-            drag.exec()
+            drag.exec(Qt.MoveAction)
             rect = self.parent().rect()
             pos = self.parent().mapFromGlobal(QCursor.pos())
             if not rect.contains(pos):
@@ -19,11 +19,11 @@ class DragDropLabel(QLabel):
         event.accept()
         
     def dropEvent(self, event):
-        lb = event.source()
-        if self == lb:
+        src = event.source()
+        if self == src:
             return
-        if lb.tag > self.tag:
-            lb.move(self.pos())
+        if src.tag > self.tag:
+            src.move(self.pos())
             self.setVisible(False)
         else:
-            lb.setVisible(False)
+            src.setVisible(False)

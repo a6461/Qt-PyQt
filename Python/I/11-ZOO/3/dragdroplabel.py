@@ -15,11 +15,11 @@ class DragDropLabel(QLabel):
         event.accept()
 
     def dropEvent(self, event):
-        lb = event.source()
-        if self == lb:
+        src = event.source()
+        if self == src:
             return
-        if lb.tag > self.tag:
-            lb.move(self.pos())
+        if src.tag > self.tag:
+            src.move(self.pos())
             self.setVisible(False)
         else:
-            lb.setVisible(False)
+            src.setVisible(False)
