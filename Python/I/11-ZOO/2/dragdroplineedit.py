@@ -10,6 +10,6 @@ class DragDropLineEdit(QLineEdit):
             event.ignore()
 
     def dropEvent(self, event):
-        lb = event.source()
-        self.setText(lb.text())
-        lb.setVisible(False)
+        src = event.source()
+        self.setText(src.text())
+        src.setVisible(False)

@@ -32,15 +32,13 @@ class Form(Ui_Form, QWidget):
         self.pushButton_4.clicked.connect(self.clear)
         self.form2.new()
         self.label.mouseMoved.connect(self.mouseMove)
-        self.label.startChanged.connect(self.changeStart)
+        self.label.mousePressed.connect(self.mousePress)
         self.label.mouseReleased.connect(self.mouseRelease)
-        self.label_3.backColorChanged.connect(self.changePenColor)
-        self.label_5.backColorChanged.connect(self.changeBrushColor)
         self.pen.setCapStyle(Qt.RoundCap)
         self.pen.setJoinStyle(Qt.MiterJoin)
-        self.radioButton.toggled.connect(self.changeMode)
-        self.radioButton_2.toggled.connect(self.changeMode)
-        self.radioButton_3.toggled.connect(self.changeMode)
+        self.radioButton.toggled.connect(self.setMode)
+        self.radioButton_2.toggled.connect(self.setMode)
+        self.radioButton_3.toggled.connect(self.setMode)
         self.pix = QPixmap(self.label.pixmap())
 
     def new(self):
@@ -50,13 +48,9 @@ class Form(Ui_Form, QWidget):
 
     def open(self):
         s = QFileDialog.getOpenFileName(self, 'Открытие', '',
-            'Image files (*.bmp *.jpg *.png *.gif)')[0]
+            'Image files (*.bmp *.jpg *.png)')[0]
         if s:
-            if os.path.splitext(s)[1] == '.gif':
-                self.label.setMovie(QMovie(s))
-                self.label.movie().start()
-            else:
-                self.label.setPixmap(QPixmap(s, '1'))
+            self.label.setPixmap(QPixmap(s, '1'))
             self.setWindowTitle('Image Editor - ' + s)
 
     def save(self):
@@ -100,20 +94,20 @@ class Form(Ui_Form, QWidget):
                 self.drawFigure(QRect(self.startPt, self.movePt), painter)
             self.label.repaint()
 
-    def changeStart(self, pos):
+    def mousePress(self, event):
         self.pix = QPixmap(self.label.pixmap())
-        self.movePt = self.startPt = pos
+        self.movePt = self.startPt = event.pos()
 
-    def changePenColor(self):
+    def on_label_3_backColorChanged(self):
         self.pen.setColor(self.label_3.palette().color(QPalette.Background))
 
-    def changeBrushColor(self):
+    def on_label_5_backColorChanged(self):
         self.brush.setColor(self.label_5.palette().color(QPalette.Background))
 
     def on_spinBox_valueChanged(self, value):
         self.pen.setWidth(int(value))
 
-    def changeMode(self):
+    def setMode(self):
         rb = self.sender()
         if not rb.isChecked():
             return
@@ -125,12 +119,12 @@ class Form(Ui_Form, QWidget):
         if self.mode == 1:
             painter.drawLine(self.startPt, self.movePt)
         else:
-            painter.setPen(QPen(Qt.black, 1, Qt.DashLine))
+            painter.setPen(QPen(Qt.black, 2))
             painter.drawRect(QRect(self.startPt, self.movePt))
         self.label.repaint()
 
     def drawFigure(self, rect, painter):
-        painter.fillRect(rect, self.brush.color())
+        painter.fillRect(rect, self.brush)
         w = self.pen.width()
         painter.drawRect(QRect(rect.x() + w / 2, rect.y() + w / 2,
                                rect.width() - w, rect.height() - w))

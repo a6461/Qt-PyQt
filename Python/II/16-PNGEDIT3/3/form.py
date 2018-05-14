@@ -33,17 +33,13 @@ class Form(Ui_Form, QWidget):
         self.pushButton_4.clicked.connect(self.clear)
         self.form2.new()
         self.label.mouseMoved.connect(self.mouseMove)
-        self.label.startChanged.connect(self.changeStart)
+        self.label.mousePressed.connect(self.mousePress)
         self.label.mouseReleased.connect(self.mouseRelease)
-        self.label_3.backColorChanged.connect(self.changePenColor)
-        self.label_5.backColorChanged.connect(self.changeBrushColor)
-        self.label_6.mousePressed.connect(self.changeFigure)
-        self.label_6.painted.connect(self.paintPattern)
         self.pen.setCapStyle(Qt.RoundCap)
         self.pen.setJoinStyle(Qt.MiterJoin)
-        self.radioButton.toggled.connect(self.changeMode)
-        self.radioButton_2.toggled.connect(self.changeMode)
-        self.radioButton_3.toggled.connect(self.changeMode)
+        self.radioButton.toggled.connect(self.setMode)
+        self.radioButton_2.toggled.connect(self.setMode)
+        self.radioButton_3.toggled.connect(self.setMode)
         self.pix = QPixmap(self.label.pixmap())
 
     def new(self):
@@ -55,11 +51,7 @@ class Form(Ui_Form, QWidget):
         s = QFileDialog.getOpenFileName(self, 'Открытие', '',
             'Image files (*.bmp *.jpg *.png *.gif)')[0]
         if s:
-            if os.path.splitext(s)[1] == '.gif':
-                self.label.setMovie(QMovie(s))
-                self.label.movie().start()
-            else:
-                self.label.setPixmap(QPixmap(s, '1'))
+            self.label.setPixmap(QPixmap(s, '1'))
             self.setWindowTitle('Image Editor - ' + s)
 
     def save(self):
@@ -103,15 +95,15 @@ class Form(Ui_Form, QWidget):
                 self.drawFigure(QRect(self.startPt, self.movePt), painter)
             self.label.repaint()
 
-    def changeStart(self, pos):
+    def mousePress(self, event):
         self.pix = QPixmap(self.label.pixmap())
-        self.movePt = self.startPt = pos
+        self.movePt = self.startPt = event.pos()
 
-    def changePenColor(self):
+    def on_label_3_backColorChanged(self):
         self.pen.setColor(self.label_3.palette().color(QPalette.Background))
         self.label_6.repaint()
 
-    def changeBrushColor(self):
+    def on_label_5_backColorChanged(self):
         self.brush.setColor(self.label_5.palette().color(QPalette.Background))
         self.label_6.repaint()
 
@@ -119,21 +111,11 @@ class Form(Ui_Form, QWidget):
         self.pen.setWidth(int(value))
         self.label_6.repaint()
 
-    def changeMode(self):
+    def setMode(self):
         rb = self.sender()
         if not rb.isChecked():
             return
         self.mode = self.verticalLayout_2.indexOf(rb)
-
-    def reversibleDraw(self):
-        painter = QPainter(self.label.pixmap())
-        painter.setCompositionMode(QPainter.RasterOp_NotSourceXorDestination)
-        if self.mode == 1:
-            painter.drawLine(self.startPt, self.movePt)
-        else:
-            painter.setPen(QPen(Qt.black, 1, self.figureMode + 1))
-            painter.drawRect(QRect(self.startPt, self.movePt))
-        self.label.repaint()
 
     def drawFigure(self, rect, painter):
         w = self.pen.width()
@@ -146,7 +128,18 @@ class Form(Ui_Form, QWidget):
         elif self.figureMode == 1:
             painter.drawEllipse(r)
 
-    def paintPattern(self):
+    def reversibleDraw(self):
+        painter = QPainter(self.label.pixmap())
+        painter.setCompositionMode(QPainter.RasterOp_NotSourceXorDestination)
+        if self.mode == 1:
+            painter.drawLine(self.startPt, self.movePt)
+        else:
+            painter.setPen(
+                QPen(Qt.black, 2 - self.figureMode, self.figureMode + 1))
+            painter.drawRect(QRect(self.startPt, self.movePt))
+        self.label.repaint()
+
+    def on_label_6_painted(self):
         painter = QPainter()
         painter.begin(self.label_6)
         r = self.label_6.rect()
@@ -154,7 +147,7 @@ class Form(Ui_Form, QWidget):
                         painter)
         painter.end()
 
-    def changeFigure(self):
+    def on_label_6_mousePressed(self):
         self.radioButton_3.setChecked(True)
         self.figureMode = (self.figureMode + 1) % 2
         self.label_6.repaint()

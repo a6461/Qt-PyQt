@@ -13,12 +13,12 @@ class Form(Ui_Form, QWidget):
         event.accept()
 
     def dragMoveEvent(self, event):
-        child = self.childAt(event.pos())
-        if (child == None or child == event.source()):
+        trg = self.childAt(event.pos())
+        if (trg == None):
             event.accept()
         else:
             event.ignore()
 
     def dropEvent(self, event):
-        lb = event.source()
-        lb.move(event.pos())
+        src = event.source()
+        src.move(event.pos())

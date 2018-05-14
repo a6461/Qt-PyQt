@@ -8,6 +8,7 @@ class Form2(Ui_Form2, QDialog):
         super(self.__class__, self).__init__(parent)
         self.setupUi(self)
         self.setFixedSize(self.size())
+        self.setWindowFlags(Qt.Dialog | Qt.WindowCloseButtonHint)
         self.buttonBox.accepted.connect(self.new)
 
     def new(self):

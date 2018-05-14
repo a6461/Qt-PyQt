@@ -31,7 +31,7 @@ class Form(Ui_Form, QWidget):
 
     def open(self):
         s = QFileDialog.getOpenFileName(self, 'Открытие', '',
-            'Image files (*.bmp *.jpg *.png *.gif)')[0]
+            'Image files (*.bmp *.jpg *.png)')[0]
         if s:
             self.label.setPixmap(QPixmap(s, '1'))
             self.setWindowTitle('Image Editor - ' + s)

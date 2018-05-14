@@ -9,7 +9,7 @@ class Form2(Ui_Form2, QDialog):
         self.setupUi(self)
         self.setFixedSize(self.size())
         self.setWindowFlags(Qt.Dialog | Qt.WindowCloseButtonHint)
-	self.buttonBox.accepted.connect(self.new)
+        self.buttonBox.accepted.connect(self.new)
 
     def new(self):
         w = self.spinBox.value() - 4
