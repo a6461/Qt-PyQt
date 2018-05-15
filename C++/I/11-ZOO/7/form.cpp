@@ -36,6 +36,14 @@ void Form::dropEvent(QDropEvent *event)
     src->move(event->pos());
 }
 
+void Form::setButton()
+{
+    ui->pushButton->setText("Зоопарк открыт");
+    ui->pushButton->setStyleSheet("color: green;");
+    ui->pushButton->setIcon(
+                style()->standardIcon(QStyle::SP_DialogApplyButton));
+}
+
 void Form::reload()
 {
     for (auto child = children().begin(); child < children().begin() + 4; child++)
@@ -47,14 +55,6 @@ void Form::reload()
         ((DragDropLabel*)(*child))->move(pos.x(), pos.y() / 2);
     }
     ui->pushButton->setFocus();
-}
-
-void Form::setButton()
-{
-    ui->pushButton->setText("Зоопарк открыт");
-    ui->pushButton->setStyleSheet("color: green;");
-    ui->pushButton->setIcon(
-                style()->standardIcon(QStyle::SP_DialogApplyButton));
 }
 
 void Form::on_pushButton_clicked()
