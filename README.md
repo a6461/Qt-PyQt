@@ -14,7 +14,7 @@
 *Курсоры и значки*
 5. **COLORS** ([C++](/C++/I/09-COLORS) и [Python](/Python/I/09-COLORS))<br/>
 *Цвета*
-6. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO))<br/>
+6. **ZOO** ([C++](/C++/I/11-ZOO) и [Python](/Python/I/11-ZOO), , [описание](/Python/I/11-ZOO/11-ZOO.docx))<br/>
 *Перетаскивание (drag & drop)*
 ## Часть II
 1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1), [описание](/Python/II/14-PNGEDIT1/14-PNGEDIT1.docx))<br/>
