@@ -32,8 +32,8 @@ void Form::dragEnterEvent(QDragEnterEvent *event)
 
 void Form::dropEvent(QDropEvent *event)
 {
-    DragDropLabel *lb = (DragDropLabel*)event->source();
-    lb->move(event->pos());
+    DragDropLabel *src = (DragDropLabel*)event->source();
+    src->move(event->pos());
 }
 
 void Form::setButton()

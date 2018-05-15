@@ -19,7 +19,7 @@ public:
     ~Form();
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
-    void load();
+    void reload();
 
 private slots:
     void setButton();

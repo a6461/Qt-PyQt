@@ -7,7 +7,7 @@
 
 class DragDropLineEdit : public QLineEdit
 {
-    int _tag = 0;
+    int _tag;
 public:
     DragDropLineEdit(QWidget *parent = 0);
     void dragEnterEvent(QDragEnterEvent *event);

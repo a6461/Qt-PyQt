@@ -29,17 +29,16 @@ void DragDropLabel::dragEnterEvent(QDragEnterEvent *event)
 
 void DragDropLabel::dropEvent(QDropEvent *event)
 {
-    DragDropLabel *lb = (DragDropLabel*)event->source();
-    setStyleSheet(styleSheet().append("background-color: #f0f0f0;"));
-    if (this == lb)
+    DragDropLabel *src = (DragDropLabel*)event->source();
+    if (this == src)
         return;
-    if (lb->tag() > tag())
+    if (src->tag() > tag())
     {
-        lb->move(pos());
+        src->move(pos());
         setVisible(false);
     }
     else
-        lb->setVisible(false);
+        src->setVisible(false);
 }
 
 void DragDropLabel::dragLeaveEvent(QDragLeaveEvent*)

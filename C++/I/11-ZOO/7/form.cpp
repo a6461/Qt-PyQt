@@ -32,11 +32,11 @@ void Form::dragEnterEvent(QDragEnterEvent *event)
 
 void Form::dropEvent(QDropEvent *event)
 {
-    DragDropLabel *lb = (DragDropLabel*)event->source();
-    lb->move(event->pos());
+    DragDropLabel *src = (DragDropLabel*)event->source();
+    src->move(event->pos());
 }
 
-void Form::load()
+void Form::reload()
 {
     for (auto child = children().begin(); child < children().begin() + 4; child++)
     {
@@ -59,7 +59,7 @@ void Form::setButton()
 
 void Form::on_pushButton_clicked()
 {
-    load();
+    reload();
     for (auto child = children().begin(); child < children().begin() + 4; child++)
     {
         ((DragDropLabel*)(*child))->setVisible(true);

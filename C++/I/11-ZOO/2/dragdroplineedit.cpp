@@ -14,7 +14,7 @@ void DragDropLineEdit::dragEnterEvent(QDragEnterEvent *event)
 
 void DragDropLineEdit::dropEvent(QDropEvent *event)
 {
-    DragDropLabel *lb = (DragDropLabel*)event->source();
-    setText(lb->text());
-    lb->setVisible(false);
+    DragDropLabel *src = (DragDropLabel*)event->source();
+    setText(src->text());
+    src->setVisible(false);
 }
