@@ -24,7 +24,7 @@ signals:
 
 private:
     Ui::Form2 *ui;
-    int count = 0;
+    int count;
 };
 
 #endif // FORM2_H
