@@ -17,9 +17,9 @@
 6. **ZOO** ([C++](/C++/I/11-ZOO)([описание](/C++/I/11-ZOO/11-ZOO.docx)) и [Python](/Python/I/11-ZOO)([описание](/Python/I/11-ZOO/11-ZOO.docx)))<br/>
 *Перетаскивание (drag & drop)*
 ## Часть II
-1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1), [описание](/Python/II/14-PNGEDIT1/14-PNGEDIT1.docx))<br/>
+1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1)([описание](/Python/II/14-PNGEDIT1/14-PNGEDIT1.docx)))<br/>
 *Работа с графическими файлами, рисование тонким пером*
-2. **PNGEDIT2** ([Python](/Python/II/15-PNGEDIT2), [описание](/Python/II/15-PNGEDIT2/15-PNGEDIT2.docx))<br/>
+2. **PNGEDIT2** ([Python](/Python/II/15-PNGEDIT2)([описание](/Python/II/15-PNGEDIT2/15-PNGEDIT2.docx)))<br/>
 *Цветное перо и прямые линии*
 3. **PNGEDIT3** ([Python](/Python/II/16-PNGEDIT3))<br/>
 *Прямоугольники и эллипсы, режим прозрачности*
@@ -30,5 +30,5 @@
 *Флажки и группы флажков*
 2. **LISTWDG1** ([Python](/Python/III/25-LISTWDG1))<br/>
 *Выпадающие и обычные списки*
-3. **HTOWERS** ([Python](/Python/III/33-HTOWERS), [описание](/Python/III/33-HTOWERS/33-HTOWERS.docx))<br/>
+3. **HTOWERS** ([Python](/Python/III/33-HTOWERS)([описание](/Python/III/33-HTOWERS/33-HTOWERS.docx)))<br/>
 *Создание компонентов во время выполнения программы*
