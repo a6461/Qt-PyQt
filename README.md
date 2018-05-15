@@ -8,7 +8,7 @@
 *Обработка исключений*
 2. **SIGSLOTS** ([C++](/C++/I/04-EVENTS) и [Python](/Python/I/04-SIGSLOTS))<br/>
 *Сигналы, слоты и события*
-3. **FORMS** ([C++](/C++/I/05-FORMS))<br/>
+3. **FORMS** ([C++](/C++/I/05-FORMS), [описание](/C++/I/05-FORMS/05-FORMS.docx))<br/>
 *Формы*
 4. **CURSORS** ([C++](/C++/I/07-CURSORS))<br/>
 *Курсоры и значки*
