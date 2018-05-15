@@ -16,6 +16,6 @@ Form3::~Form3()
 
 void Form3::on_buttonBox_clicked(QAbstractButton *button)
 {
-    if ((QPushButton*)button == ui->buttonBox->button(QDialogButtonBox::Apply))
+    if ((QPushButton*)button != ui->buttonBox->button(QDialogButtonBox::Cancel))
         emit windowTitlesChanged(ui->lineEdit->text(), ui->lineEdit_2->text());
 }
