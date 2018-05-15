@@ -14,16 +14,16 @@ class Form(Ui_Form, QWidget):
         self.label_4.tag = 0
         self.pushButton.setIcon(
             self.style().standardIcon(QStyle.SP_MessageBoxCritical))
-        self.pushButton.clicked.connect(self.pushButtonClicked)
+        self.pushButton.clicked.connect(self.closeZoo)
 
     def dragEnterEvent(self, event):
         event.accept()
         
     def dropEvent(self, event):
-        lb = event.source()
-        lb.move(event.pos())
+        src = event.source()
+        src.move(event.pos())
 
-    def load(self):
+    def reload(self):
         for child in self.children()[0:4]:
             c = self.horizontalLayoutWidget.findChild(
                 QLineEdit, 'lineEdit' + child.objectName()[5:])
@@ -31,8 +31,8 @@ class Form(Ui_Form, QWidget):
             child.move(pos.x(), pos.y() / 2)
         self.pushButton.setFocus(True)
 
-    def pushButtonClicked(self):
-        self.load()
+    def closeZoo(self):
+        self.reload()
         for child in self.children()[0:4]:
             child.setVisible(True)
             c = self.horizontalLayoutWidget.findChild(

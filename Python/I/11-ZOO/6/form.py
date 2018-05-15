@@ -19,5 +19,5 @@ class Form(Ui_Form, QWidget):
         event.accept()
         
     def dropEvent(self, event):
-        lb = event.source()
-        lb.move(event.pos())
+        src = event.source()
+        src.move(event.pos())

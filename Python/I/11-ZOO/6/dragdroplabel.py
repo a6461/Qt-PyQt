@@ -10,7 +10,7 @@ class DragDropLabel(QLabel):
             self.setStyleSheet('color: blue;')
             drag = QDrag(self)
             drag.setMimeData(QMimeData())
-            drag.exec()
+            drag.exec(Qt.MoveAction)
             rect = self.parent().rect()
             pos = self.parent().mapFromGlobal(QCursor.pos())
             if not rect.contains(pos):
@@ -19,9 +19,11 @@ class DragDropLabel(QLabel):
             s = ''
             for child in self.parent().children()[0:4]:
                 if child.isVisible():
+                # один из зверей на свободе
                     return
                 s += child.text()
             if s == '':
+                # все клетки пусты
                 return
             self.parent().pushButton.setText('Зоопарк открыт')
             self.parent().pushButton.setStyleSheet('color: green;')
@@ -34,16 +36,16 @@ class DragDropLabel(QLabel):
             self.styleSheet() + 'background-color: yellow;')
         
     def dropEvent(self, event):
-        lb = event.source()
+        src = event.source()
         self.setStyleSheet(
             self.styleSheet() + 'background-color: #F0F0F0;')
-        if self == lb:
+        if self == src:
             return
-        if lb.tag > self.tag:
-            lb.move(self.pos())
+        if src.tag > self.tag:
+            src.move(self.pos())
             self.setVisible(False)
         else:
-            lb.setVisible(False)
+            src.setVisible(False)
 
     def dragLeaveEvent(self, event):
         self.setStyleSheet(
