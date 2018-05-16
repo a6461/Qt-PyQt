@@ -7,15 +7,15 @@ class Form(Ui_Form, QWidget):
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
-        self.setFixedSize(self.size())
-        self.label_6.setStyleSheet('background-color: black; color: white')
-        self.horizontalSlider.valueChanged.connect(self.setColor)
-        self.horizontalSlider_2.valueChanged.connect(self.setColor)
-        self.horizontalSlider_3.valueChanged.connect(self.setColor)
-        self.horizontalSlider_4.valueChanged.connect(self.setColor)
-        self.setColor()
+        self.horizontalSlider_2.valueChanged.connect(
+            self.on_horizontalSlider_valueChanged)
+        self.horizontalSlider_3.valueChanged.connect(
+            self.on_horizontalSlider_valueChanged)
+        self.horizontalSlider_4.valueChanged.connect(
+            self.on_horizontalSlider_valueChanged)
+        self.on_horizontalSlider_valueChanged()
         
-    def setColor(self):
+    def on_horizontalSlider_valueChanged(self):
         c = QColor(self.horizontalSlider_2.value(),
                 self.horizontalSlider_3.value(),
                 self.horizontalSlider_4.value(),

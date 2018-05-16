@@ -72,6 +72,7 @@ class Ui_Form(object):
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.horizontalSlider_5)
         self.gridLayout.addLayout(self.formLayout, 0, 0, 1, 1)
         self.label_6 = QtWidgets.QLabel(Form)
+        self.label_6.setStyleSheet("background-color: black; color: white;")
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.gridLayout.addWidget(self.label_6, 1, 0, 1, 1)

@@ -8,18 +8,18 @@ class Form(Ui_Form, QWidget):
         super(self.__class__, self).__init__()
         self.setupUi(self)
         self.setMinimumSize(self.size())
-        self.label_6.setStyleSheet('background-color: black; color: white')
-        self.horizontalSlider.valueChanged.connect(self.setColor)
-        self.horizontalSlider_2.valueChanged.connect(self.setColor)
-        self.horizontalSlider_3.valueChanged.connect(self.setColor)
-        self.horizontalSlider_4.valueChanged.connect(self.setColor)
-        self.horizontalSlider_5.valueChanged.connect(self.grayScale)
-        self.setColor()
+        self.horizontalSlider_2.valueChanged.connect(
+            self.on_horizontalSlider_valueChanged)
+        self.horizontalSlider_3.valueChanged.connect(
+            self.on_horizontalSlider_valueChanged)
+        self.horizontalSlider_4.valueChanged.connect(
+            self.on_horizontalSlider_valueChanged)
+        self.on_horizontalSlider_valueChanged()
         font = self.label_6.font()
         font.setCapitalization(QFont.Capitalize)
         self.label_6.setFont(font)
         
-    def setColor(self):
+    def on_horizontalSlider_valueChanged(self):
         c = QColor(self.horizontalSlider_2.value(),
                 self.horizontalSlider_3.value(),
                 self.horizontalSlider_4.value(),
@@ -37,7 +37,7 @@ class Form(Ui_Form, QWidget):
                     self.label_6.setText(self.label_6.text() + " " + color)
                     break
 
-    def grayScale(self):
+    def on_horizontalSlider_5_valueChanged(self):
         value = self.horizontalSlider_5.value()
         self.horizontalSlider_2.setValue(value)
         self.horizontalSlider_3.setValue(value)
