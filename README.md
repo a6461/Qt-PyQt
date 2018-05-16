@@ -12,7 +12,7 @@
 *Формы*
 4. **CURSORS** ([C++](/C++/I/07-CURSORS))<br/>
 *Курсоры и значки*
-5. **COLORS** ([C++](/C++/I/09-COLORS) ([описание](/C++/I/09-COLORS/09-COLORS.docx)) и [Python](/Python/I/09-COLORS))<br/>
+5. **COLORS** ([C++](/C++/I/09-COLORS) ([описание](/C++/I/09-COLORS/09-COLORS.docx)) и [Python](/Python/I/09-COLORS) ([описание](/Python/I/09-COLORS/09-COLORS.docx)))<br/>
 *Цвета*
 6. **ZOO** ([C++](/C++/I/11-ZOO) ([описание](/C++/I/11-ZOO/11-ZOO.docx)) и [Python](/Python/I/11-ZOO) ([описание](/Python/I/11-ZOO/11-ZOO.docx)))<br/>
 *Перетаскивание (drag & drop)*
