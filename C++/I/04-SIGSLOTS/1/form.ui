@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Прыгающие кнопки</string>
   </property>
-  <widget class="QPushButton" name="button">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -31,7 +31,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>button</sender>
+   <sender>pushButton</sender>
    <signal>clicked()</signal>
    <receiver>Form</receiver>
    <slot>close()</slot>
