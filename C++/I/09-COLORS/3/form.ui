@@ -22,6 +22,9 @@
      <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: black; color: white;</string>
+   </property>
    <property name="text">
     <string>Color</string>
    </property>
@@ -35,7 +38,7 @@
      <x>10</x>
      <y>10</y>
      <width>271</width>
-     <height>241</height>
+     <height>244</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
