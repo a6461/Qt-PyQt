@@ -8,7 +8,6 @@ Form::Form(QWidget *parent) :
     ui->setupUi(this);
     setMinimumSize(size());
 
-    ui->label_6->setStyleSheet("background-color: black; color: white");
     connect(ui->horizontalSlider_2, SIGNAL(valueChanged(int)), this, SLOT(on_horizontalSlider_valueChanged()));
     connect(ui->horizontalSlider_3, SIGNAL(valueChanged(int)), this, SLOT(on_horizontalSlider_valueChanged()));
     connect(ui->horizontalSlider_4, SIGNAL(valueChanged(int)), this, SLOT(on_horizontalSlider_valueChanged()));
