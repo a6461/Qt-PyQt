@@ -36,3 +36,15 @@ class Form(Ui_Form, QWidget):
         self.pushButton.setText(self.names[k])
         self.pushButton.setCursor(self.cursors[k])
         self.pushButton.setProperty('tag', k)
+
+    @pyqtSlot()
+    def on_pushButton_2_clicked(self):
+        self.setCursor(self.pushButton.cursor())
+
+    @pyqtSlot()
+    def on_pushButton_3_clicked(self):
+        self.setCursor(Qt.WaitCursor)
+
+    @pyqtSlot()
+    def on_pushButton_4_clicked(self):
+        self.setCursor(Qt.ArrowCursor)
