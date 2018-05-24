@@ -220,6 +220,17 @@
     <string>Ctrl+R</string>
    </property>
   </action>
+  <action name="actionJustify">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Justify</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+J</string>
+   </property>
+  </action>
   <action name="actionFontColor">
    <property name="text">
     <string>&amp;Font color...</string>
@@ -233,14 +244,6 @@
   <action name="actionFont">
    <property name="text">
     <string>&amp;Font...</string>
-   </property>
-  </action>
-  <action name="actionJustify">
-   <property name="text">
-    <string>&amp;Justify</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+J</string>
    </property>
   </action>
  </widget>
