@@ -25,15 +25,15 @@
 *Прямоугольники и эллипсы, режим прозрачности*
 4. **PNGEDIT4** ([Python](/Python/II/17-PNGEDIT4))<br/>
 *Дополнительные графические возможности*
-5. **TXTEDIT1** ([Python](/Python/II/18-TXTEDIT1)<br/>
+5. **TXTEDIT1** ([Python](/Python/II/18-TXTEDIT1))<br/>
 *Меню и работа с текстовыми файлами*
-6. **TXTEDIT2** ([Python](/Python/II/19-TXTEDIT2)<br/>
+6. **TXTEDIT2** ([Python](/Python/II/19-TXTEDIT2))<br/>
 *Дополнительные возможности меню, настройка цвета и шрифта*
-7. **TXTEDIT3** ([Python](/Python/II/20-TXTEDIT3)<br/>
+7. **TXTEDIT3** ([Python](/Python/II/20-TXTEDIT3))<br/>
 *Команды редактирования, контекстное меню*
-8. **TXTEDIT4** ([Python](/Python/II/21-TXTEDIT4)<br/>
+8. **TXTEDIT4** ([Python](/Python/II/21-TXTEDIT4))<br/>
 *Панель инструментов*
-9. **TXTEDIT5** ([Python](/Python/II/22-TXTEDIT5)<br/>
+9. **TXTEDIT5** ([Python](/Python/II/22-TXTEDIT5))<br/>
 *Статусная панель и подсказки*
 ## Часть III
 1. **CHKBOXES** ([Python](/Python/III/24-CHKBOXES))<br/>
