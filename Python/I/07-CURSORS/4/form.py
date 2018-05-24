@@ -39,7 +39,6 @@ class Form(Ui_Form, QWidget):
         names = [value for (key, value) in sorted(names.items())]
         return names
 
-    @pyqtSlot() 
     def on_pushButton_mousePressed(self, event):
         k = self.pushButton.property('tag')
         c = len(self.names)
