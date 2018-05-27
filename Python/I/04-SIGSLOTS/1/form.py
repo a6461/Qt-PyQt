@@ -9,5 +9,5 @@ class Form(Ui_Form, QWidget):
         self.setupUi(self)
 
     def mousePressEvent(self, event):
-        self.button.move(event.x() - self.button.width() / 2,
-                     event.y() - self.button.height() / 2);
+        self.pushButton.move(event.x() - self.pushButton.width() / 2,
+                             event.y() - self.pushButton.height() / 2)

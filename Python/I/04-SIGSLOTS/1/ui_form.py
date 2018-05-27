@@ -12,16 +12,16 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(292, 140)
-        self.button = QtWidgets.QPushButton(Form)
-        self.button.setGeometry(QtCore.QRect(10, 10, 75, 23))
-        self.button.setObjectName("button")
+        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton.setGeometry(QtCore.QRect(10, 10, 75, 23))
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Form)
-        self.button.clicked.connect(Form.close)
+        self.pushButton.clicked.connect(Form.close)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Прыгающие кнопки"))
-        self.button.setText(_translate("Form", "Закрыть"))
+        self.pushButton.setText(_translate("Form", "Закрыть"))
 
