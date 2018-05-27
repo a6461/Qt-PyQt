@@ -1,5 +1,5 @@
 def main():
-    print('Программа STORINFO\n')
+    print('Программа DISKINFO\n')
     print('\nДля завершения программы нажмите <Enter>...')
     input()
 

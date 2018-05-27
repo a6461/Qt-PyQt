@@ -14,6 +14,6 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 #endif
 
-    std::cout << QString("Программа DISKINFO").toLocal8Bit().data() << std::endl;
+    std::cout << QString("Программа DISKINFO\n").toLocal8Bit().data() << std::endl;
     std::cout << QString("\nДля завершения программы нажмите <Enter>...").toLocal8Bit().data() << std::endl;
 }
