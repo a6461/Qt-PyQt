@@ -4,17 +4,19 @@
 
 На данный момент реализованы следующие проекты:
 ## Часть I
-1. **EXCEP** ([Python](/Python/I/03-EXCEP) ([описание](/Python/I/03-EXCEP/03-EXCEP.docx)))<br/>
+1. **DISKINFO** ([C++](/C++/I/02-DISKINFO) и ([Python](/Python/I/02-DISKINFO)<br/>
+*Консольное приложение*
+2. **EXCEP** ([Python](/Python/I/03-EXCEP) ([описание](/Python/I/03-EXCEP/03-EXCEP.docx)))<br/>
 *Обработка исключений*
-2. **SIGSLOTS** ([C++](/C++/I/04-EVENTS) и [Python](/Python/I/04-SIGSLOTS))<br/>
+3. **SIGSLOTS** ([C++](/C++/I/04-EVENTS) и [Python](/Python/I/04-SIGSLOTS))<br/>
 *Сигналы, слоты и события*
-3. **FORMS** ([C++](/C++/I/05-FORMS) ([описание](/C++/I/05-FORMS/05-FORMS.docx)) и [Python](/Python/I/05-FORMS) ([описание](/Python/I/05-FORMS/05-FORMS.docx)))<br/>
+4. **FORMS** ([C++](/C++/I/05-FORMS) ([описание](/C++/I/05-FORMS/05-FORMS.docx)) и [Python](/Python/I/05-FORMS) ([описание](/Python/I/05-FORMS/05-FORMS.docx)))<br/>
 *Формы*
-4. **CURSORS** ([C++](/C++/I/07-CURSORS))<br/>
+5. **CURSORS** ([C++](/C++/I/07-CURSORS))<br/>
 *Курсоры и значки*
-5. **COLORS** ([C++](/C++/I/09-COLORS) ([описание](/C++/I/09-COLORS/09-COLORS.docx)) и [Python](/Python/I/09-COLORS) ([описание](/Python/I/09-COLORS/09-COLORS.docx)))<br/>
+6. **COLORS** ([C++](/C++/I/09-COLORS) ([описание](/C++/I/09-COLORS/09-COLORS.docx)) и [Python](/Python/I/09-COLORS) ([описание](/Python/I/09-COLORS/09-COLORS.docx)))<br/>
 *Цвета*
-6. **ZOO** ([C++](/C++/I/11-ZOO) ([описание](/C++/I/11-ZOO/11-ZOO.docx)) и [Python](/Python/I/11-ZOO) ([описание](/Python/I/11-ZOO/11-ZOO.docx)))<br/>
+7. **ZOO** ([C++](/C++/I/11-ZOO) ([описание](/C++/I/11-ZOO/11-ZOO.docx)) и [Python](/Python/I/11-ZOO) ([описание](/Python/I/11-ZOO/11-ZOO.docx)))<br/>
 *Перетаскивание (drag & drop)*
 ## Часть II
 1. **PNGEDIT1** ([Python](/Python/II/14-PNGEDIT1) ([описание](/Python/II/14-PNGEDIT1/14-PNGEDIT1.docx)))<br/>
