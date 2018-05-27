@@ -1,4 +1,4 @@
-import os, win32file
+import os, sys, win32file
 from PyQt5.QtCore import QStorageInfo
 
 def driveTypes():
@@ -6,7 +6,7 @@ def driveTypes():
     for value in dir(win32file):
         if value[0:6] == 'DRIVE_':
             key = getattr(win32file, value)
-            types[key] = value[6:]
+            types[key] =  value[6:]
     types = [value for (key, value) in sorted(types.items())]
     return types
 
@@ -35,7 +35,11 @@ def main():
     print('Программа DISKINFO\n')
     print(' Disk Type         Size (K)     Free (K)')
     print('=' * 43)
-    DInfo(os.path.realpath(__file__))
+    if len(sys.argv) < 2:
+        DInfo(os.path.realpath(__file__))
+    else:
+        for d in sys.argv[1:]:
+            DInfo(d + ':/')
     print('\nДля завершения программы нажмите <Enter>...')
     input()
 
