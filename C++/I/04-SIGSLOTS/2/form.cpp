@@ -9,7 +9,6 @@ Form::Form(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
-    connect(ui->button_2, SIGNAL(mouseMoved()), this, SLOT(wildButtonMove()));
     qsrand(QDateTime::currentMSecsSinceEpoch());
 }
 
@@ -20,19 +19,19 @@ Form::~Form()
 
 void Form::mousePressEvent(QMouseEvent *event)
 {
-    ui->button->move(event->x() - ui->button->width() / 2,
-        event->y() - ui->button->height() / 2);
+    ui->pushButton->move(event->x() - ui->pushButton->width() / 2,
+        event->y() - ui->pushButton->height() / 2);
 }
 
-void Form::wildButtonMove()
+void Form::on_pushButton_2_mouseMoved()
 {
     if (QApplication::keyboardModifiers() == Qt::ControlModifier)
         return;
-    ui->button_2->move(qrand() % (width() - 5), qrand() % (height() - 5));
+    ui->pushButton_2->move(qrand() % (width() - 5), qrand() % (height() - 5));
 }
 
-void Form::on_button_2_clicked()
+void Form::on_pushButton_2_clicked()
 {
-    ui->button_2->setText("Изменить");
-    disconnect(ui->button_2, SIGNAL(mouseMoved()), 0, 0);
+    ui->pushButton_2->setText("Изменить");
+    disconnect(ui->pushButton_2, SIGNAL(mouseMoved()), 0, 0);
 }

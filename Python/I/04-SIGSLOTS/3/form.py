@@ -17,7 +17,7 @@ class Form(Ui_Form, QWidget):
             self.pushButton_2.mouseMoved.connect(
                 self.on_pushButton_2_mouseMoved)
             self.pushButton_2.clicked.disconnect()
-            self.pushButton_2.clicked.connect(self.on_pushButton_2_clicked_2)
+            self.pushButton_2.clicked.connect(self.on_pushButton_2_clicked)
 
     def on_pushButton_2_mouseMoved(self):
         if QApplication.keyboardModifiers() == Qt.ControlModifier:
@@ -31,10 +31,10 @@ class Form(Ui_Form, QWidget):
             self.pushButton_2.setText('Изменить')
             self.pushButton_2.mouseMoved.disconnect()
         self.pushButton_2.clicked.disconnect()
-        self.pushButton_2.clicked.connect(self.on_pushButton_2_clicked_2)
+        self.pushButton_2.clicked.connect(self.changeWindowState)
 
     @pyqtSlot()
-    def on_pushButton_2_clicked_2(self):
+    def changeWindowState(self):
         if self.windowState() == Qt.WindowNoState:
             self.setWindowState(Qt.WindowMaximized)
         else:

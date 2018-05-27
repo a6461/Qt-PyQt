@@ -20,9 +20,8 @@ protected:
     void mousePressEvent(QMouseEvent *event);
 
 private slots:
-    void wildButtonMove();
-
-    void on_button_2_clicked();
+    void on_pushButton_2_mouseMoved();
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Form *ui;

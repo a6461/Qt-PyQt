@@ -22,8 +22,8 @@ protected:
     void resizeEvent(QResizeEvent *event);
 
 private slots:
-    void wildButtonMove();
-    void on_button_2_clicked();
+    void on_pushButton_2_mouseMoved();
+    void on_pushButton_2_clicked();
     void changeWindowState();
 
 private:

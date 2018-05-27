@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Прыгающие кнопки</string>
   </property>
-  <widget class="QPushButton" name="button">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -26,7 +26,7 @@
     <string>Закрыть</string>
    </property>
   </widget>
-  <widget class="WildButton" name="button_2">
+  <widget class="WildButton" name="pushButton_2">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -54,7 +54,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>button</sender>
+   <sender>pushButton</sender>
    <signal>clicked()</signal>
    <receiver>Form</receiver>
    <slot>close()</slot>
