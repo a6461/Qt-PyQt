@@ -15,9 +15,9 @@ void DInfo(QString path)
     QString none("---");
     QString d = path.mid(0, 3);
     QStorageInfo *si = new QStorageInfo(d);
-    QString s = QString(" %1").arg(path[0], -4);
+    QString s = QString(" %1").arg(d[0], -4);
     QStringList dt = { "UNKNOWN", "NO_ROOT_DIR", "REMOVABLE", "FIXED", "REMOTE", "CDROM", "RAMDISK" };
-    if (true)
+    if (si->isValid())
     {
         #ifdef Q_OS_WIN32
             s.append(QString(" %1").arg(dt.at(GetDriveType((wchar_t*)d.utf16())), -12));

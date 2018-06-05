@@ -24,9 +24,8 @@ class Form(Ui_Form, QWidget):
         src.move(event.pos())
 
     def reload(self):
-        for child in self.children()[0:4]:
-            c = self.horizontalLayoutWidget.findChild(
-                QLineEdit, 'lineEdit' + child.objectName()[5:])
+        for child in self.findChildren(QLabel):
+            c = self.findChild(QLineEdit, 'lineEdit' + child.objectName()[5:])
             pos = self.horizontalLayoutWidget.mapToParent(c.pos())
             child.move(pos.x(), pos.y() / 2)
         self.pushButton.setFocus(True)
@@ -35,8 +34,7 @@ class Form(Ui_Form, QWidget):
         self.reload()
         for child in self.children()[0:4]:
             child.setVisible(True)
-            c = self.horizontalLayoutWidget.findChild(
-                QLineEdit, 'lineEdit' + child.objectName()[5:])
+            c = self.findChild(QLineEdit, 'lineEdit' + child.objectName()[5:])
             c.setText('')
             c.tag = 0
         self.pushButton.setText('Зоопарк закрыт')

@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-05-08T23:12:37
+# Project created by QtCreator 2018-05-06T11:55:20
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = IMGVIEW
+TARGET = LINEEDITS
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        form.cpp
+        form.cpp \
+    colorlineedit.cpp
 
 HEADERS += \
-        form.h
+        form.h \
+    colorlineedit.h
 
 FORMS += \
         form.ui

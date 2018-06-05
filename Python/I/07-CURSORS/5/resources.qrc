@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/resource"/>
+    <qresource prefix="/">
+        <file>C1.cur</file>
+        <file>C2.cur</file>
+    </qresource>
+</RCC>
