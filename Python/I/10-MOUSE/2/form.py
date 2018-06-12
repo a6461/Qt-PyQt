@@ -4,7 +4,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from mouseframe import *
 
-class Form(Ui_Form, QWidget):
+class Form(Ui_Form, QScrollArea):
     p = QPoint()
     s = QSize()
     
@@ -12,15 +12,14 @@ class Form(Ui_Form, QWidget):
         super(self.__class__, self).__init__()
         self.setupUi(self)
         self.setFixedSize(self.size())
-        self.frame.mouseMoved.connect(self.frameMouseMove)
-        self.frame_2.mouseMoved.connect(self.frameMouseMove)
-        self.frame.mousePressed.connect(self.frameMousePress)
-        self.frame_2.mousePressed.connect(self.frameMousePress)   
+        #self.setWidget
+        #self.frame_2.mouseMoved[QMouseEvent].connect(self.on_frame_mouseMoved)
+        #self.frame_2.mousePressed[QMouseEvent].connect(self.on_frame_mousePressed)
 
-    def frameMouseMove(self, event):
+    def on_frame_mouseMoved(self, event):
         a = self.sender()
         self.setWindowTitle('Mouse - {} {{X={},Y={}}}'.format(
-            a.objectName(), a.x(), a.y()))
+            a.objectName(), event.x(), event.y()))
         if event.buttons() == Qt.LeftButton:
             #a.move(a.pos() + event.pos() - self.p)
             p0 = a.pos() + event.pos() - self.p
@@ -31,7 +30,7 @@ class Form(Ui_Form, QWidget):
             s0 = self.s + QSize(event.x() - self.p.x(), event.y() - self.p.y())
             a.resize(max(50, s0.width()), max(20, s0.height()))
             
-    def frameMousePress(self, event):
+    def on_frame_mousePressed(self, event):
         self.p = event.pos()
         a = self.sender()
         a.raise_()

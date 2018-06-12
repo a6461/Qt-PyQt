@@ -31,6 +31,5 @@ class ColorLineEdit(QLineEdit):
             if len(self.actions()) == 0:
                 action = QAction(
                     QIcon(self.style().standardPixmap(
-                        QStyle.SP_MessageBoxCritical)), '')
-                action.setWhatsThis('fasfsaf')
+                        QStyle.SP_MessageBoxCritical)), '', self)
                 self.addAction(action, QLineEdit.TrailingPosition)

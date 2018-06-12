@@ -79,7 +79,7 @@ class Form(Ui_Form, QWidget):
         b = self.pushButton_6.text() == 'Show Tray Icon'
         self.trayIcon.setVisible(b)
         if b:
-            self.setWindowFlag(Qt.Tool)
+            self.setWindowFlags(Qt.SplashScreen | Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
         else:
             self.setWindowFlag(Qt.Window)
         self.pushButton_6.setText('Hide Tray Icon' if b else 'Show Tray Icon')
