@@ -4,9 +4,9 @@
 
 На данный момент реализованы следующие проекты:
 ## Часть I
-1. **DISKINFO** ([C++](/C++/I/02-DISKINFO) и [Python](/Python/I/02-DISKINFO))<br/>
+1. **DISKINFO** ([C++](/C++/I/02-DISKINFO) ([описание](/C++/I/02-DISKINFO/02-DISKINFO.docx)) и[Python](/Python/I/02-DISKINFO) ([описание](/Python/I/02-DISKINFO/02-DISKINFO.docx)))<br/>
 *Консольное приложение*
-2. **EXCEP** ([Python](/Python/I/03-EXCEP) ([описание](/Python/I/03-EXCEP/03-EXCEP.docx)))<br/>
+2. **EXCEP** ([C++](/C++/I/03-EXCEP) ([описание](/C++/I/03-EXCEP/03-EXCEP.docx)) и[Python](/Python/I/03-EXCEP) ([описание](/Python/I/03-EXCEP/03-EXCEP.docx)))<br/>
 *Обработка исключений*
 3. **SIGSLOTS** ([C++](/C++/I/04-EVENTS) и [Python](/Python/I/04-SIGSLOTS))<br/>
 *Сигналы, слоты и события*
